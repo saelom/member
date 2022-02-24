@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>게시글 목록</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')  }}">
 </head>
 <body>
     <div id="container">
-         {% include 'navbar.html' %}
-         <section>
+        {% include 'navbar.html' %}
+        <section>
             <h1>게시글 목록</h1>
-            <table class = "tbl_board">
+            <table class="tbl_board">
                 <tr>
                     <th>글번호</th><th>제목</th><th>작성일</th><th>글쓴이</th>
                 </tr>
@@ -23,9 +23,9 @@
                 </tr>
                 {% endfor %}
             </table>
-            <div class ="btn_write">
-                <!--<input type="button" value="글쓰기" onclick="goLogin()">-->
-                <a href="{{url_for('writing') }}">글쓰기</a>
+            <div class="btn_write">
+              <!--  <a href="{{ url_for('writing') }}">글쓰기</a> -->
+                <button type="button" onclick="location.href='/writing/'">글쓰기</button>
             </div>
         </section>
     </div>
