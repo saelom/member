@@ -18,6 +18,7 @@ def create_table():
             createDate timestamp date DEFAULT (datetime('now', 'localtime')),
             hit integer,
             mid char(5) NOT NULL,
+            name text NOT NULL,
             FOREIGN KEY(mid) REFERENCES member(mid) ON DELETE CASCADE
         )
     """
@@ -26,7 +27,7 @@ def create_table():
     print("board 테이블 생성")
     conn.close()
 
-#create_table()
+create_table()
 
 
 
