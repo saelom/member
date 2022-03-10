@@ -52,3 +52,4 @@ def select_board():
     conn.close()
 
 #select_board()
+#다시 git에 올리기
